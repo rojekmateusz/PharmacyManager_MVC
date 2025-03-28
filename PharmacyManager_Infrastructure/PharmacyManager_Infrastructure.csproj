@@ -1,14 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PharmacyManager_Application\PharmacyManager_Application.csproj" />
-    <ProjectReference Include="..\PharmacyManager_Infrastructure\PharmacyManager_Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
