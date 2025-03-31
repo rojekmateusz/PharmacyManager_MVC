@@ -12,4 +12,7 @@ public class MedicineDto
     public DateTime ExpiryDate { get; set; }
     public int StockQuantity { get; set; }
 
- }
+    public ICollection<PrescriptionMedicine> PrescriptionMedicines { get; set; } = [];
+    public ICollection<TransactionItem> TransactionItems { get; set; } = [];
+
+}
