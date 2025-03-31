@@ -2,12 +2,12 @@
 
 public class TransactionItem
 {
-    public int Id { get; set; }
+    public int TransactionItemId { get; set; }
     public int Quantity { get; set; }
     public decimal UnitPrice { get; set; }
 
     public int MedicineId { get; set; }
     public Medicine? Medicine { get; set; } 
 
-    public int TransactionId { get; set; } = default!;
+    public int TransactionId { get; set; } 
 }

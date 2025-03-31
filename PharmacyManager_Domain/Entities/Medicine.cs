@@ -2,7 +2,7 @@
 
 public class Medicine
 {
-    public int Id { get; set; }
+    public int MedicineId { get; set; }
     public string Name { get; set; } = default!;
     public string Manufacturer { get; set; } = default!;
     public decimal Price { get; set; }
