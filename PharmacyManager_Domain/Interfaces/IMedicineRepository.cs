@@ -5,4 +5,5 @@ namespace PharmacyManager_Domain.Interfaces;
 public interface IMedicineRepository
 {
     Task CreateMedicine(Medicine medicine);
+    Task<IEnumerable<Medicine>> GetAllMedicines();
 }

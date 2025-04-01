@@ -1,4 +1,5 @@
-﻿using PharmacyManager_Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using PharmacyManager_Domain.Entities;
 using PharmacyManager_Domain.Interfaces;
 using PharmacyManager_Infrastructure.Persistance;
 
@@ -10,5 +11,11 @@ internal class MedicineRepository(PMDbContext dbContext) : IMedicineRepository
     {
         dbContext.Add(medicine);
         await dbContext.SaveChangesAsync();
+    }
+
+    public async Task<IEnumerable<Medicine>> GetAllMedicines()
+    {
+        var medicines = await dbContext.Medicines.ToListAsync();
+        return medicines;
     }
 }
