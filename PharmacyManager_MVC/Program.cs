@@ -1,5 +1,5 @@
 using PharmacyManager_Infrastructure.Extensions;
-
+using PharmacyManager_Application.Extensions;
 namespace PharmacyManager_MVC
 {
     public class Program
@@ -11,6 +11,7 @@ namespace PharmacyManager_MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddInfrastructure(builder.Configuration);
+            builder.Services.AddApplication();
 
             var app = builder.Build();
 

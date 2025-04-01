@@ -1,0 +1,47 @@
+﻿@using PharmacyManager_Application.UseCase.Medicines.Command.CreateMedicine
+
+@model CreateMedicineCommand
+
+<h1>Create Medicine</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form action="/Medicine/CreateMedicine" method="post">
+            <div class="form-group mb-3">
+                <label class="control-label" for="Name">Name</label>
+                <input class="form-control" type="text" id="Name" name="Name">
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label" for="Manufacturer">Manufacturer</label>
+                <input class="form-control" type="text" id="Manufacturer" name="Manufacturer">
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label" for="Price">Price</label>
+                <input class="form-control" type="number" id="Price" name="Price">
+            </div>
+
+            <div class="form-group mb-3">
+                <legend>Requires Prescription</legend>
+                <label for="yes"><input id="RequiresPrescription" type="radio" name="RequiresPrescription" class="inline" value="true" checked /> Yes</label>
+                <label for="no"><input id="RequiresPrescription" type="radio" name="RequiresPrescription" class="inline" value="false"/> No</label>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label" for="StockQuantity">Expiry Date</label>
+                <input class="form-control" type="date" id="ExpiryDates" name="ExpiryDate">
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label" for="StockQuantity">Stock Quantity</label>
+                <input class="form-control" type="number" id="StockQuantity" name="StockQuantity">
+            </div>
+
+            <div class="form-group mb-3">
+                <input type="submit" value="Create" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>

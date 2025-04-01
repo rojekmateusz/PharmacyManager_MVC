@@ -1,7 +1,10 @@
 ﻿    using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PharmacyManager_Domain.Entities;
+using PharmacyManager_Domain.Interfaces;
 using PharmacyManager_Infrastructure.Persistance;
+using PharmacyManager_Infrastructure.Repositories;
 using System.Net;
 using System.Runtime.CompilerServices;
 
@@ -14,6 +17,7 @@ public static class ServiceCollectionExtension
         var connectionString = configuration.GetConnectionString("PMDb");
 
         services.AddDbContext<PMDbContext>(options => options.UseSqlServer(connectionString));
+        services.AddScoped<IMedicineRepository, MedicineRepository>();
             
     }
 }
