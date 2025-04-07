@@ -10,6 +10,9 @@ public class CreateMedicineCommandHandler(IMapper mapper, IMedicineRepository me
     public async Task Handle(CreateMedicineCommand request, CancellationToken cancellationToken)
     {
         var medicine = mapper.Map<Medicine>(request);
+        medicine.EncodeName();
         await medicineRepository.CreateMedicine(medicine);
+      
     }
+      
 }

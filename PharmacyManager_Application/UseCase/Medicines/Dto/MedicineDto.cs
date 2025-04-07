@@ -11,7 +11,7 @@ public class MedicineDto
     public bool RequiresPrescription { get; set; }
     public DateTime ExpiryDate { get; set; }
     public int StockQuantity { get; set; }
-
+    public string? EncodedName { get; set; }
     public ICollection<PrescriptionMedicine> PrescriptionMedicines { get; set; } = [];
     public ICollection<TransactionItem> TransactionItems { get; set; } = [];
 

@@ -18,4 +18,10 @@ internal class MedicineRepository(PMDbContext dbContext) : IMedicineRepository
         var medicines = await dbContext.Medicines.ToListAsync();
         return medicines;
     }
+
+    public async Task<Medicine> GetByEncodedName(string encodedName)
+    {
+        var medicine = await dbContext.Medicines.FirstAsync(m => m.EncodedName == encodedName);
+        return medicine;
+    }
 }

@@ -1,42 +1,42 @@
-﻿@using PharmacyManager_Application.UseCase.Medicines.Command.CreateMedicine
+﻿@using PharmacyManager_Application.UseCase.Medicines.Command.CreateMedicine;
 
-@model CreateMedicineCommand
+@model CreateMedicineCommand    
 
 <h1>Create Medicine</h1>
 <hr />
 
 <div class="row">
     <div class="col-md-4">
-        <form action="/Medicine/CreateMedicine" method="post">
+        <form asp-action="CreateMedicine" method="post">
             <div class="form-group mb-3">
-                <label class="control-label" for="Name">Name</label>
-                <input class="form-control" type="text" id="Name" name="Name">
+                <label class="control-label" asp-for="Name">Name</label>
+                <input class="form-control" type="text" asp-for="Name">
             </div>
 
             <div class="form-group mb-3">
-                <label class="control-label" for="Manufacturer">Manufacturer</label>
-                <input class="form-control" type="text" id="Manufacturer" name="Manufacturer">
+                <label class="control-label" asp-for="Manufacturer">Manufacturer</label>
+                <input class="form-control" type="text" asp-for="Manufacturer">
             </div>
 
             <div class="form-group mb-3">
-                <label class="control-label" for="Price">Price</label>
-                <input class="form-control" type="number" id="Price" name="Price">
+                <label class="control-label" asp-for="Price">Price</label>
+                <input class="form-control" type="number" asp-for="Price">
             </div>
 
             <div class="form-group mb-3">
                 <legend>Requires Prescription</legend>
-                <label for="yes"><input id="RequiresPrescription" type="radio" name="RequiresPrescription" class="inline" value="true" checked /> Yes</label>
-                <label for="no"><input id="RequiresPrescription" type="radio" name="RequiresPrescription" class="inline" value="false"/> No</label>
+                <label for="yes"><input id="RequiresPrescription" type="radio" asp-for="RequiresPrescription" class="inline" value="true" checked /> Yes</label>
+                <label for="no"><input id="RequiresPrescription" type="radio" asp-for="RequiresPrescription" class="inline" value="false" /> No</label>
             </div>
 
             <div class="form-group mb-3">
-                <label class="control-label" for="StockQuantity">Expiry Date</label>
-                <input class="form-control" type="date" id="ExpiryDates" name="ExpiryDate">
+                <label class="control-label" asp-for="ExpiryDate">Expiry Date</label>
+                <input class="form-control" type="date" asp-for="ExpiryDate">
             </div>
 
             <div class="form-group mb-3">
-                <label class="control-label" for="StockQuantity">Stock Quantity</label>
-                <input class="form-control" type="number" id="StockQuantity" name="StockQuantity">
+                <label class="control-label" asp-for="StockQuantity">Stock Quantity</label>
+                <input class="form-control" type="number" asp-for="StockQuantity">
             </div>
 
             <div class="form-group mb-3">
