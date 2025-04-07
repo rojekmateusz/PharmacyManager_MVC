@@ -10,6 +10,9 @@ public class Medicine
     public DateTime ExpiryDate { get; set; }
     public int StockQuantity { get; set; }
 
+    public string EncodedName { get; private set; } = default!;
+    public void EncodeName() => EncodedName = Name.ToLower().Replace(" ", "-");
+
     public ICollection<PrescriptionMedicine> PrescriptionMedicines { get; set; } = [];
     public ICollection<TransactionItem> TransactionItems { get; set; } = [];
 }
